@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SVG Referat // Santacroce // ZGK // LF Sinner // D3DE //</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/svg.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+
+	  <!--<div style="display:none;">
+    <?php include_once("images/clear-icons/all-icons.svg"); ?>
+  </div>-->
+	<div style="display: none;">
+		<object data="images/clear-icons/all-icons.svg" type="image/svg+xml"></object>
+	</div>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>SVG</h1>
+					<h3>Referat</h3>
+					<p>
+						<small><!-- &#8594;  --> // <a href="http://seitenbau.com">Alejandro Santacroce </a> //
+						<a href="http://www.zgk-konstanz.de/wordpress/">ZGK </a> //
+						<a href="https://intranet.zgk-konstanz.de/moodle/login/index.php">LF Sinner </a> //
+						<a href="https://intranet.zgk-konstanz.de/moodle/login/index.php">D3DE</a> //
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Inhalt</h2>
+						<small>
+						<p class="fragment grow">Was ist?</p>
+						<p class="fragment grow">Grundlagen</p>
+						<p class="fragment grow">Wie erstellen wir ein SVG?</p>
+						<p class="fragment grow">Einbindung</p>
+						<p class="fragment grow">Links</p>
+						<p class="fragment grow">Animationen</p>
+						<p class="fragment grow">Anwendungsbereiche</p>
+						<p class="fragment grow">Motivierende Beispiele</p>
+						<p class="fragment grow">Tools + Plugins + Librarie</p>
+						<p class="fragment grow">Can I use?</p>
+						<p class="fragment grow">Fazit</p>
+						<p class="fragment grow">Quellen</p>
+						</small>
+				</section>
+
+				<section>
+					<h1>SVG</h1>
+					<h3>Was ist?</h3>						
+					<small>Die Abkürzung SVG bedeutet:</small>
+					<br />
+					<br />
+						<p class="fragment highlight-red">S= Scalable</p>
+						<p class="fragment highlight-green">V= Vector</p>
+						<p class="fragment highlight-blue">G= Graphics</p>
+					<br />
+						<small>kurze Geschichte:</small> <br />
+						<small>&#8594; erster Versuch mit SVG &#8594; 1988.</small><br />
+						<small>&#8594; offizielle Empfehlung von der W3C (World Wide Web Consortium) &#8594; 2001.</small>
+				</section>
+
+				<section>
+					<h1>SVG</h1>
+					<h3>Grundlagen</h3>
+						<ul>
+						<small>
+							<li><p class="fragment roll-in">SVG ist eine auf XML basierende Sprache</p></li>
+							<li><p class="fragment roll-in">SVG Grafiken bestehen aus ASCII-Code</p></li>
+							<li><p class="fragment roll-in">SVG ist für Maschinen + Menschen lesbar</p></li>
+							<li><p class="fragment roll-in">SVG Grafiken können mit nur ein Texteditor erstellt werden</p></li>
+							<li><p class="fragment roll-in">SVG Grafiken sind ohne Qualitätsverlust skalierbar</p></li>
+							<li><p class="fragment roll-in">SVG unterstützt Stylesprachen (z.B. CSS)</p></li>
+							<li><p class="fragment roll-in">SVG unterstützt Scriptsprachen (z.B. JavaScript)</p></li>
+							<li><p class="fragment roll-in">SVG ist "Flexible"</p></li>
+							<li><p class="fragment roll-in">SVG ist "Small"</p></li>
+							<li><p class="fragment roll-in">SVG ist "Open"</p></li>
+							<li><p class="fragment roll-in">SVG ist "Standard" (offizieller Standard des W3C)</p></li>
+							<li><p class="fragment roll-in">extrem geeignet für Retina Display</p></li>
+						</small>
+						</ul>
+				</section>
+
+
+
+
+		<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  AS 28.11.2014 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+
+
+				<section>
+					<section>
+						<h1>SVG</h1>
+						<h3>Wie erstellen wir ein SVG?</h3>
+							<p>mit Illustrator, Inkscape, oder einfach nur mit Code!</p>
+					</section>
+					<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+						<h2>Illustrator Beispiele</h2>
+					</section>
+					<section>
+						<h2>Schritt 1.1</h2>
+						<p>normales Icon als Vector (Path)</p>
+						<a class="test" href="https://docs.google.com/presentation/d/1CNQLbqC0krocy_fZrM5fZ-YmQ2JgEADRh3qR6RbOOGk/edit#slide=id.g27310e803_1602">
+							<img src="images/blume_1.png" alt="Blume von AI bis HTML">
+						</a>
+					</section>
+					<section>
+						<h2>Schritt 1.2</h2>
+						<p>Farbe und Größe sind nicht relevant</p>
+						<a class="test" href="https://docs.google.com/presentation/d/1CNQLbqC0krocy_fZrM5fZ-YmQ2JgEADRh3qR6RbOOGk/edit#slide=id.g27310e803_1602">
+							<img src="images/blume_9.png" alt="Blume von AI bis HTML">
+						</a>
+					</section>
+					<section>
+						<h2>Schritt 2</h2>
+						<p>jedes Element kann man als separates/unabhänginges Form speichern</p>
+						<a class="test" href="https://docs.google.com/presentation/d/1CNQLbqC0krocy_fZrM5fZ-YmQ2JgEADRh3qR6RbOOGk/edit#slide=id.g27310e803_1602">
+							<img src="images/blume_2.png" alt="Blume von AI bis HTML">
+						</a>
+					</section>
+					<section>
+						<h2>Schritt 3</h2>
+						<p>so:</p>
+						<a class="test" href="https://docs.google.com/presentation/d/1CNQLbqC0krocy_fZrM5fZ-YmQ2JgEADRh3qR6RbOOGk/edit#slide=id.g27310e803_1602">
+							<img src="images/blume_3.png" alt="Blume von AI bis HTML">
+						</a>
+					</section>
+					<section>
+						<h2>Schritt 4</h2>
+						<p>eine Zeichenfläche erstellen</p>
+						<a class="test" href="https://docs.google.com/presentation/d/1CNQLbqC0krocy_fZrM5fZ-YmQ2JgEADRh3qR6RbOOGk/edit#slide=id.g27310e803_1602">
+							<img src="images/blume_4.png" alt="Blume von AI bis HTML">
+						</a>
+					</section>
+					<section>
+						<h2>Schritt 5</h2>
+						<p>als SVG speichern (Zeichenflächen verwenden)</p>
+						<a class="test" href="https://docs.google.com/presentation/d/1CNQLbqC0krocy_fZrM5fZ-YmQ2JgEADRh3qR6RbOOGk/edit#slide=id.g27310e803_1602">
+							<img src="images/blume_5.png" alt="Blume von AI bis HTML">
+						</a>
+					</section>
+					<section>
+						<h2>Schritt 6</h2>
+						<p>SVG-Optionen wählen</p>
+						<a class="test" href="https://docs.google.com/presentation/d/1CNQLbqC0krocy_fZrM5fZ-YmQ2JgEADRh3qR6RbOOGk/edit#slide=id.g27310e803_1602">
+							<img src="images/blume_6_2.png" alt="Blume von AI bis HTML">
+						</a>
+					</section>
+					<section>
+						<h2>Schritt 7</h2>
+						<p>in unserem Ordner speichern</p>
+						<a class="test" href="https://docs.google.com/presentation/d/1CNQLbqC0krocy_fZrM5fZ-YmQ2JgEADRh3qR6RbOOGk/edit#slide=id.g27310e803_1602">
+							<img src="images/blume_7.png" alt="Blume von AI bis HTML">
+						</a>
+					</section>
+					<section>
+						<h2>Schritt 8</h2>
+						<p>und voilà!</p>
+						<a class="test" href="http://cornify.com">
+							<img src="images/blume_8.png" alt="Blume von AI bis HTML">
+						</a>
+					</section>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Code
+
+
+						```
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px"
+							 height="300px" viewBox="56 106 400 300" style="enable-background:new 56 106 400 300;" xml:space="preserve">
+							<g id="blumen_x5F_3">
+								<g>
+									<g>
+										<path d="M416,146v220H96V146H416 M456,106H56v300h400V106L456,106z"/>
+									</g>
+									<path d="M230.944,337.014c-25.542-4.337-44.988-26.426-44.988-53.041v-42.122l44.988,44.519V337.014z"/>
+									<path d="M264.648,302.605v-46.039c45.2-8.428,46.881-57.158,33.13-82.368l-22.6,24.689l-19.487-24.688l-18.22,24.689
+										l-23.25-24.689c-13.376,24.519-12.38,73.882,33.129,82.367v81.234h24.517c29.92,0,54.175-24.098,54.175-53.828v-42.122
+										L264.648,302.605z"/>
+								</g>
+							</g>
+						</svg>
+
+						```
+					</script>
+				</section>
+
+				<section data-transition="linear" data-background="#007777" data-background-transition="slide">
+					<h1>SVG</h1>
+					<h3>mit den neuen Illustrator CC</h3>
+				</section>
+
+				<section data-transition="linear" data-background="#007777" data-background-transition="slide">
+					<h2>copy + paste</h2>
+					<h3>vom AI zur Sublime (o.ä.)</h3>
+						<a class="test" href="#"><img src="images/copy_.png" alt="Copy + Paste"></a>
+
+						<a class="test" href="#"><img  class="fragment roll-in" src="images/paste_.png" alt="Copy + Paste"></a>
+
+				</section>
+ 
+		<section>
+			<h2>PNG vs SVG = Pixel vs Pfad</h2>
+				<p>Vergleich von 12x Größe</p>
+				<a class="test" href="#">
+					<img src="images/vergleich.png" alt="SVG vs PNG">
+				</a>
+		</section>
+
+        <section>
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h1>Einbindung</h1>
+          </section>
+          <section>
+            <h2>img-Tag</h2>
+            <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+              <img src="blume.svg" alt="Blume in Rahme">
+            </code></pre>
+            <img class="logosvg nostyle" src="blume.svg" alt="Blume in Rahme">
+            <br>
+          </section>
+
+          <section data-background="blume.png" data-background-repeat="repeat" data-background-size="100px">
+            <h2>background-image</h2>
+            <h3>HTML + CSS</h3>
+            <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+            	<img style="background-image"; src="blume.svg">
+              <div id="blumesvg"></div>
+            </code></pre>
+            <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+#blumesvg {
+  width: 300px;
+  height: 300px;
+  background: url(../blume.svg);
+  background-size: contain;
+}
+            </code></pre>
+            <div id="blumesvg"></div>
+            <br>
+          </section>
+
+          <section>
+            <h2>Object-Tag</h2>
+            <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+              <object data="blume.svg" type="image/svg+xml">
+  Fallback
+</object>
+            </code></pre>
+            <object class="nostyle" data="blume.svg" type="image/svg+xml">Fallback</object>
+            <br>
+          </section>
+        </section>
+
+				<!-- Example of nested vertical slides -->
+        <section>
+			<section>
+				<h1>SVG</h1>
+				<h3>in HTML-Code ("inline")</h3>
+				<small>
+				<ul>
+					<li><p class="fragment roll-in">SVGs können via CSS gestyled werden</p>
+					<li><p class="fragment roll-in">auch die einzelnen Elemente innerhalb eines SVG</p>
+				</ul>
+				</small>
+
+        </section>
+
+		<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+			<h3>Filtern mit CSS Beispiel</h3>
+            	<p>Inline SVG</p>
+		</section>
+					
+		<section>
+			<h2>SVG circle</h2>
+
+            <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+...
+    <svg width="200" height="200">
+      <circle id="outer" cx="100" cy="100" r="100" fill="white" />
+      <circle id="inner" cx="100" cy="100" r="50" fill="black" />
+    </svg>
+...
+            </code></pre>
+
+            <p class="fragment">
+              <br>
+              <svg width="200" height="200">
+                <circle id="outer" cx="100" cy="100" r="100" fill="white" />
+                <circle id="inner" cx="100" cy="100" r="50" fill="black" />
+              </svg>
+            </p>
+
+	</section>
+
+	<section>
+		<h2>Filter Palette</h2>
+              <small>
+              <ul>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.11&ukname=feBlend">feBlend - filter for combining images</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.14&ukname=feColorMatrix">feColorMatrix - filter for color transforms</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.15&ukname=feComponentTransfer">feComponentTransfer</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.12&ukname=feComposite">feComposite</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.6&ukname=feConvolveMatrix">feConvolveMatrix</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.17&ukname=feDiffuseLighting">feDiffuseLighting</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.7&ukname=feDisplacementMap">feDisplacementMap</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.19&ukname=feFlood">feFlood</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.8&ukname=feGaussianBlur">feGaussianBlur</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.20&ukname=feImage">feImage</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.13&ukname=feMerge">feMerge</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.10&ukname=feMorphology">feMorphology</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.9&ukname=feOffset">feOffset - filter for drop shadows</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.18&ukname=feSpecularLighting">feSpecularLighting</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.21&ukname=feTile">feTile</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.22&ukname=feTurbulence">feTurbulence</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.16&ukname=feDistantLight,%20fePointLight,%20feSpotLight">feDistantLight - filter for lighting</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.16&ukname=feDistantLight,%20fePointLight,%20feSpotLight">fePointLight - filter for lighting</a></li>
+                <li><a href="http://svg.tutorial.aptico.de/start3.php?knr=14&kname=Filtereffekte&uknr=14.16&ukname=feDistantLight,%20fePointLight,%20feSpotLight">feSpotLight - filter for lighting</a></li>
+              </ul>
+              </small>
+    </section>
+
+    <section>
+
+            <h2>feGaussianBlur</h2>
+            <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+              <svg width="200" height="200">
+  <defs>
+    <filter id="f1" x="0" y="0">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5.5" />
+    </filter>
+  </defs>
+...
+</svg>
+            </code></pre>
+
+
+<br />
+            <p class="fragment">
+              <svg width="200" height="200">
+              <defs>
+                <filter id="f1">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="5.5" />
+                </filter>
+              </defs>
+              <circle class="outer" cx="100" cy="100" r="90" fill="white" filter="url(#f1)" />
+              <circle class="inner" cx="100" cy="100" r="50" fill="black" />
+            </svg>
+            </p>
+		</section>
+	</section>
+
+    <section>
+		<h1>SVG</h1>
+			<h3>Verweis zu</h3>
+          <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<svg width="200" height="200">
+  <circle cx="100" cy="100" r="100" fill="black" />
+  <a xlink:href="#/12">
+    <circle cx="100" cy="100" r="50" fill="gray" />
+  </a>
+</svg>
+          </code></pre>
+
+      <p class="fragment">
+          <small>Link zum n&auml;chsten Slide</small>
+     <br/>
+          <svg role="img" aria-label="titel und beschreibung" width="200" height="200">
+            <circle cx="100" cy="100" r="100" fill="black"><title>genauerer titel BLACK</title></circle>
+            <a xlink:href="#/12">
+              <circle id="linksvg" cx="100" cy="100" r="50" fill="gray" /><title>genauerer titel GREY</title></circle>
+            </a>
+          </svg>
+    </p>
+        </section>
+
+				<section>
+	  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+	  					<h1>Animationen</h1>
+	          		</section>
+
+				<section>
+            		<h2>Möglichkeiten</h2>
+					<ul>
+						<li>animate</li>
+						<li>set</li>
+						<li>animateMotion</li>
+						<li>animateColor</li>
+						<li>animateTransform</li>
+					</ul>
+				<br>
+				<br>
+				<h3>Animation mit Events</h3>
+				<p>z.B. bei "click" oder "hover"</p>
+				</section>
+
+		          <section>
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<svg width="500" height="250">
+  <g transform="translate( 250,125)">
+    <rect x="-75" y="-75" width="150" height="150" fill="ivory">
+      <animateTransform repeatCount="indefinite"
+        attributeName="transform" type="rotate"
+        from="0" to="90" begin="0" dur="5s" />
+    </rect>
+  </g>
+</svg>
+		            </code></pre>
+
+		            <svg width="500" height="250">
+		              <g transform="translate( 250,125)">
+		              <rect x="-75" y="-75" width="150" height="150" fill="ivory">
+		                <animateTransform repeatCount="indefinite"
+		                  attributeName="transform" type="rotate"
+		                  from="0" to="90" begin="0" dur="5s" />
+		               </rect>
+		              </g>
+		            </svg>
+		          </section>
+
+		          <aside class="notes">
+		            transform="translate": setze den Koordinatensystem-0-0-Punkt auf die Mitte des umschließenden Containers
+		          </aside>
+
+		          <section>
+		            <h2>AnimateMotion</h2>
+		              <svg width="600" height="260">
+		                <circle cx="50" cy="55" r="50" fill="ivory" stroke="gainsboro" stroke-width="4">
+		                  <animateMotion dur="5s" values="0,0; 450,0; 200,150; 0,0" repeatCount="indefinite"></animateMotion>
+		                </circle>
+		                <circle cx="50" cy="50" r="4" fill="firebrick"></circle>
+		                <circle cx="500" cy="50" r="4" fill="firebrick"></circle>
+		                <circle cx="250" cy="200" r="4" fill="firebrick"></circle>
+		              </svg>
+		          </section>
+		</section>
+
+		<section data-state="customevent">
+			<h2>und jetzt?</h2>
+			<p>Wie können wir unser SVG verwenden?</p>
+		</section>
+
+	<section>
+		<section>
+			<h2>Anwendungsbereiche </h2>
+				<small>
+				<ul>
+					<li><p class="fragment roll-in">Karten, Stadtpläne, Geokarten und Wetterkarten</p></li>
+					<li><p class="fragment roll-in">Icons (Sprite: zusammen mit .PNG als Ersatz)</p></li>
+					<li><p class="fragment roll-in">Responsive Logos/Icons</p></li>
+						<a class="test" href="http://tympanus.net/Tutorials/ResponsiveSVGs/index6.html">
+							<img class="fragment roll-in" src="images/responsiveicons_2.gif" alt="SVG vs PNG">
+						</a>
+				</ul>
+				</small>
+		</section>
+		<section>
+			<h2>und...</h2>
+				<small>
+				<ul>
+					<li><p class="fragment roll-in">Animmierte Webseiten (ohne Flash/JavaScript)</p></li>
+					<li><p class="fragment roll-in">Musik Player</p></li>
+					<li><p class="fragment roll-in">interaktive Infografik/Diagramme</p></li>
+						<img class="fragment roll-in" src="images/ui_concept.gif">
+					<li><p class="fragment roll-in">usw.</p></li>
+				</ul>
+				</small>
+		</section>	
+	</section>
+
+		<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+			<h2>motivierende Beispiele</h2>
+			<small>
+				<a href="http://svgjs.com/clock/" target="_blank">Wanduhr</a><br>
+				<a href="http://sarasoueidan.com/images/svg-nesting-chick.svg" target="_blank">Responsive Ei</a><br>
+				<a href="http://tympanus.net/Tutorials/ResponsiveSVGs/index6.html" target="_blank">Responsive Logo</a><br>
+				<a href="http://www.joeharrison.co.uk/projects/responsiveicons" target="_blank">Responsive Logo 2</a><br>
+				<a href="http://www.polygon.com/a/xbox-one-review#" target="_blank">Xbox</a><br>
+				<a href="http://www.polygon.com/a/ps4-review" target="_blank">Play Station</a><br>
+				<a href="http://snapsvg.io/demos/#coffee" target="_blank">Kaffeemaschine</a><br>
+				<a href="http://tympanus.net/Development/AnimatedSVGIcons/" target="_blank">Animated SVG Icons</a><br>
+				<a href="http://raphaeljs.com/easing.html" target="_blank">Bewegung Effekt</a><br>
+				<a href="http://codepen.io/adobe/pen/d056d1b26b9683c018f9bb9e0f1b0e1c" target="_blank">Blur Effekt</a><br>
+				<a href="http://raphaeljs.com/spin-spin-spin.html" target="_blank">Spinner</a><br>
+				<a href="https://www.androidify.com/de/#/" target="_blank">Android-Darstellung</a><br>
+				<a href="http://demos.bonsaijs.org/demos/music/index.html" target="_blank">Musik</a><br>
+				<a href="http://demos.bonsaijs.org/demos/pong/index.html" target="_blank">Ping Pong</a><br>
+
+				
+			</small>
+		</section>
+
+		<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+			<h2>Tools + Plugins</h2>
+				<small>
+					<a href="http://lazylinepainter.info/" target="_blank">Lazy Line Painter</a><br>
+					<a href="http://svgto.jvectormap.com/" target="_blank">Karte</a><br>
+					<a href="https://petercollingridge.appspot.com/svg-editor" target="_blank">Optimizer</a><br>
+					<a href="http://philbit.com/svgpatterns/#carbonfiber" target="_blank">Patterns Gallery</a><br>
+					<a href="http://svgjs.com/filter/" target="_blank">Filter</a><br>
+					<a href="http://grumpicon.com/" target="_blank">Grumpicon</a><br>
+					<a href="http://www.svgeneration.com/" target="_blank">SVGeneration</a><br>
+					<a href="http://iconmonstr.com" target="_blank">kostenlose Icons</a><br>
+				</small>
+			<br />
+			<br />
+
+					<h2>Libraries</h2>
+				<small>
+					<a href="http://snapsvg.io/" target="_blank">snap.svg</a><br>
+					<a href="http://raphaeljs.com/">Raphaël</a><br>
+					<a href="http://codepen.io/search?q=svg&limit=all&depth=everything&show_forks=false/">Codepen</a><br>
+				</small>
+		</section>
+
+		<section style="top: 149.5px; display: block;" class="present">
+			<h2>can I use</h2>
+				<small>
+					<a href="http://caniuse.com/#search=SVG" target="_blank">caniuse.com</a>
+				</small>
+		<br />
+			<table>
+				<thead>
+					<tr>
+						<th>IE </th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>IOS Safari</th>
+						<th>Opera Mini</th>
+						<th>Android Browser</th>
+						<th>Chrome Android</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td> </td>
+						<td> </td>
+						<td>31</td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td> </td>
+						<td> </td>
+						<td>33</td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td> </td>
+						<td> </td>
+						<td>35</td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td>4.1</td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td>8</td>
+						<td> </td>
+						<td>36</td>
+						<td>5.1</td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td>4.3</td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>31</td>
+						<td>37</td>
+						<td>7</td>
+						<td> </td>
+						<td>7.1</td>
+						<td> </td>
+						<td>4.4</td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>32</td>
+						<td>38</td>
+						<td>7.1</td>
+						<td> </td>
+						<td>8</td>
+						<td> </td>
+						<td>4.4.4</td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>33</td>
+						<td>39</td>
+						<td>8</td>
+						<td>26</td>
+						<td>8.1</td>
+						<td>8</td>
+						<td>37</td>
+						<td>39</td>	
+					</tr>
+					<tr>
+						<td>TP</td>
+						<td>34</td>
+						<td>40</td>
+						<td> </td>
+						<td>27</td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td> </td>
+						<td>35</td>
+						<td>41</td>
+						<td> </td>
+						<td>28</td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td> </td>
+						<td>36</td>
+						<td>42</td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>	
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section>
+			<h1>Fazit</h1>
+	<br />
+<!-- 			<p> <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+				&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+			</p> -->
+			<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+				&ldquo;SVG ist schlechthin das beste Format für UX/UI-Design.&rdquo;
+			</blockquote>
+		</section>
+
+		<section>
+			<h2>danke für die Aufmerksamkeit</h2>
+			<br />
+				<p>
+					<small>und für die Framework &#8594; Hakim El Hattab // <a href="http://lab.hakim.se/reveal-js/#/">hakim.se </a> //
+					<a href="http://slides.com/" target="_blank">http://slides.com </a>
+					</small>
+				</p>
+			
+		</section>
+
+		<section>
+			<h1>FRAGEN?</h1>
+		</section>
+
+		<section>
+				<h2>Quellen</h2>
+				<small>
+					<ul>
+						<li><a href="http://sarasoueidan.com">http://sarasoueidan.com</a></li>
+						<li><a href="https://docs.google.com/presentation/d/1CNQLbqC0krocy_fZrM5fZ-YmQ2JgEADRh3qR6RbOOGk/edit#slide=id.g272ed8bf3_023">https://docs.google.com/presentation</a></li>
+						<li><a href="https://www.youtube.com/watch?v=SeLOt_BRAqc">Dmitry Baranovskiy - You Don't Know SVG</a></li>
+						<li><a href="http://www.selfsvg.info/">http://www.selfsvg.info/</a></li>
+						<li><a href="http://css-tricks.com/svg-sprites-use-better-icon-fonts/">http://css-tricks.com/svg-sprites-use-better-icon-fonts/</a></li>
+						<li><a href="http://css-tricks.com/using-svg/">http://css-tricks.com/using-svg/</a></li>
+						<li><a href="http://www.w3schools.com/svg/default.asp">http://www.w3schools.com/svg/default.asp</a></li>
+						<li><a href="http://www.w3.org/Graphics/SVG/">http://www.w3.org/Graphics/SVG/</a></li>
+						<li><a href="http://svg.tutorial.aptico.de/start.php">http://svg.tutorial.aptico.de/start.php</a></li>
+						<li><a href="http://www.mediaevent.de/tutorial/svg-animate.html">http://www.mediaevent.de/tutorial/svg-animate.html</a></li>
+						<li><a href="http://www.mediaevent.de/tutorial/svg-cheat-sheet.html">http://www.mediaevent.de/tutorial/svg-cheat-sheet.html</a></li>
+						<li><a href="http://css-tricks.com/html-for-icon-font-usage/">http://css-tricks.com/html-for-icon-font-usage/</a></li>
+						<li><a href="http://icomoon.io/app/#/select">http://icomoon.io/app/#/select</a></li>
+					</ul>
+				</small>
+			</section>
+
+		<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  STYLES + THEMES XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+			
+<!--
+			<section id="transitions">
+				<h2>Transition Styles</h2>
+				<p>
+					You can select from different transitions, like: <br>
+					<a href="?transition=cube#/transitions">Cube</a> -
+					<a href="?transition=page#/transitions">Page</a> -
+					<a href="?transition=concave#/transitions">Concave</a> -
+					<a href="?transition=zoom#/transitions">Zoom</a> -
+					<a href="?transition=linear#/transitions">Linear</a> -
+					<a href="?transition=fade#/transitions">Fade</a> -
+					<a href="?transition=none#/transitions">None</a> -
+					<a href="?#/transitions">Default</a>
+				</p>
+			</section>
+
+			<section id="themes">
+				<h2>Themes</h2>
+				<p>
+					Reveal.js comes with a few themes built in: <br>
+					<a href="?theme=sky#/themes">Sky</a> -
+					<a href="?theme=beige#/themes">Beige</a> -
+					<a href="?theme=simple#/themes">Simple</a> -
+					<a href="?theme=serif#/themes">Serif</a> -
+					<a href="?theme=night#/themes">Night</a> -
+					<a href="?#/themes">Default</a>
+				</p>
+				<p>
+					<small>
+						* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+					</small>
+				</p>
+			</section>
+
+ -->
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

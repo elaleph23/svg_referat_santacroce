@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="400px" height="300px" viewBox="-92 45 400 300" enable-background="new -92 45 400 300" xml:space="preserve">
+<g id="blumen_x5F_3">
+	<g>
+		<g>
+			<path d="M268,85v220H-52V85H268 M308,45H-92v300h400V45L308,45z"/>
+		</g>
+		<path d="M82.9,276c-25.5-4.3-45-26.4-45-53v-42.1l45,44.5V276z"/>
+		<path d="M116.6,241.6v-46c45.2-8.4,46.9-57.2,33.1-82.4l-22.6,24.7l-19.5-24.7l-18.2,24.7l-23.3-24.7
+			c-13.4,24.5-12.4,73.9,33.1,82.4v81.2h24.5c29.9,0,54.2-24.1,54.2-53.8v-42.1L116.6,241.6z"/>
+	</g>
+</g>
+</svg>
